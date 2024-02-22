@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #drag-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <img id="drag-image" src="/Imagenes/ganyu.jpg" height="200 px" draggable="true">
+
+    <script>
+        var dragImage = document.getElementById("drag-image");
+
+        dragImage.addEventListener("dragstart", function(event) {
+            event.dataTransfer.setData("text/plain", event.target.id);
+        });
+
+        document.addEventListener("dragover", function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("drop", function(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text/plain");
+            var draggedElement = document.getElementById(data);
+            draggedElement.style.left = event.clientX + "px";
+            draggedElement.style.top = event.clientY + "px";
+        });
+    </script>
+</body>
+</html>

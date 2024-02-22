@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Image</title>
+    <style>
+        #image {
+            position: relative;
+            left: 0;
+            transition: left 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="moveRight()">Move Right</button>
+    <button onclick="moveLeft()">Move Left</button>
+
+    <br><br>
+    
+    <img id="image" src="/Imagenes/diluc.jpg" height="100px" alt="Image">
+
+    <script>
+        function moveRight() {
+            var image = document.getElementById("image");
+            var currentPosition = parseInt(image.style.left) || 0;
+            image.style.left = (currentPosition + 10) + "px";
+        }
+
+        function moveLeft() {
+            var image = document.getElementById("image");
+            var currentPosition = parseInt(image.style.left) || 0;
+            image.style.left = (currentPosition - 10) + "px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #myImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: top 0.5s, left 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="/Imagenes/lisa.jpg" height="100px" alt="My Image">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var image = document.getElementById("myImage");
+
+            document.addEventListener("click", function(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+
+                console.log  ( "position x: " + x + " position y: "+ y, image);
+
+                var imagen = document.getElementById('myImage');
+                imagen.style.left = (x - imagen.offsetWidth / 2) + 'px';
+                imagen.style.top = (y - imagen.offsetHeight / 2) + 'px';
+
+            });
+        });
+    </script>
+</body>
+</html>
+
+

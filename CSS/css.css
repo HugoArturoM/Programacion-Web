@@ -1,0 +1,24 @@
+div{
+    background-color: blue;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: 50px;
+    color: silver;
+}
+
+.verde{
+    background-color: green;
+}
+
+#divAzul{
+    background-color: blue;
+}
+
+#divAzul:hover{
+    background-color: rgb(72, 206, 216);
+}

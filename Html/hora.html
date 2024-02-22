@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hora</title>
+    <script>
+        function displayGreeting() {
+            var date = new Date();
+            var hour = date.getHours();
+            var greeting;
+
+            if (hour >= 5 && hour < 12) {
+                greeting = "Buenos días";
+            } else if (hour >= 12 && hour < 18) {
+                greeting = "Buenas tardes";
+            } else {
+                greeting = "Buenas noches";
+            }
+
+            alert(greeting);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayGreeting()">Ok</button>
+</body>
+</html>

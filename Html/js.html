@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> function alerta() {
+        var date = new Date();
+        var hour = date.getHours();
+        var horario;
+
+        if (hour >= 5 && hour < 12) {
+            horario = "Buenos días";
+        } else if (hour >= 12 && hour < 18) {
+            horario = "Buenas tardes";
+        } else {
+            horario = "Buenas noches";
+        }
+
+        alert(horario);
+    }
+        </script>
+
+</head>
+
+<body>
+    
+    <input type="button" value="ok" onclick="confirm('hola');">
+
+    <input type="button" value="ok" onclick="alert('holi');">
+
+    <br><br>
+
+    <input type="button" value="Hora" onclick="alerta(this);">
+
+
+</body>
+</html>
